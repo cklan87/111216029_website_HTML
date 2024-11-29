@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>其他 - My Tech Hideout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        /* 保持與主頁一致的樣式 */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0A0F24;
+            color: #FFFFFF;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(10, 15, 36, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav > li {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .nav > li > a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        .nav > li > a:hover {
+            color: #007FFF;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #121B36;
+            border: 1px solid #007FFF;
+            border-radius: 5px;
+            min-width: 150px;
+            display: none;
+            flex-direction: column;
+            z-index: 999;
+        }
+
+        .dropdown a {
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown a:hover {
+            background-color: #007FFF;
+            color: #0A0F24;
+        }
+
+        .nav > li:hover .dropdown {
+            display: flex;
+        }
+
+        .content {
+            padding: 100px 20px 50px;
+            text-align: center;
+        }
+
+        .content h2 {
+            margin: 20px 0;
+            font-size: 2.5rem;
+            color: #007FFF;
+        }
+
+        footer {
+            background-color: #121B36;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <li>
+                <a href="index.html">主頁</a>
+            </li>
+            <li>
+                <a href="me.html">關於我</a>
+            </li>
+            <li>
+                <a href="作品.html">作品</a>
+            </li>
+            <li>
+                <a href="contact.html">其他</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="content">
+
+
+
+
+        
+    </section>
+        <!-- 經歷區域 -->
+        <section class="content" id="experience">
+           
+<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+    <div class="accordion-body">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7230.557960529773!2d121.53786204281188!3d25.024604761289783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1708998712088!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>&nbsp;</p>
+    </div>
+        </section>
+
+    <footer>
+      <p>© 2024 CKLan. All Rights Reserved.</p>
+      <a href="mailto:yourname@gmail.com" style="display: inline-block; padding: 10px 20px; margin-top: 10px; background-color: #007FFF; color: #FFFFFF; text-decoration: none; border-radius: 5px; font-size: 1rem; box-shadow: 0 0 10px #007FFF;">
+          chken.tw@gmail.com
+      </a>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
