@@ -80,49 +80,43 @@
             color: #0A0F24;
         }
 
-
-        
- 
         /* 圖片輪播器樣式 */
-       /* 圖片輪播器樣式 */
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 600px; /* 保持高度 */
-    overflow: hidden;
-}
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 600px; /* 設定固定的高度 */
+            overflow: hidden;
+        }
 
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
-.carousel-images img {
-    width: 100%;
-    height: 100%; /* 確保圖片的高度填滿容器 */
-    object-fit: contain; /* 確保圖片不被裁切 */
-}
+        .carousel-images img {
+            width: 100%; /* 設置寬度為100% */
+            height: 100%; /* 設置圖片的高度為容器高度 */
+            object-fit: contain; /* 確保圖片不被裁切，且縮放保持比例 */
+        }
 
-.carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
 
-.prev {
-    left: 10px;
-}
+        .prev {
+            left: 10px;
+        }
 
-.next {
-    right: 10px;
-}
-
-
+        .next {
+            right: 10px;
+        }
 
         /* 顯示下拉選單 */
         .nav > li:hover .dropdown {
@@ -187,9 +181,8 @@
             color: #007FFF; /* 懸停時變為藍色 */
         }
 
-
-         /* 留言板樣式 */
-         .comment-section {
+        /* 留言板樣式 */
+        .comment-section {
             margin-top: 30px;
             padding: 20px;
             background-color: #121B36;
@@ -265,7 +258,6 @@
         <button class="next" onclick="moveSlide(1)">❯</button>
     </section>
 
-
     <section class="content" id="about" data-aos="fade-up">
       <br/><br/>
       <br/><br/>
@@ -297,10 +289,6 @@
             <button type="submit">留言</button>
         </form>
     </div>
-</section>
-
-
-
 
     <footer>
       <p>© 2024 CKLan. All Rights Reserved.</p>
@@ -332,6 +320,5 @@
       setInterval(autoMoveSlide, 3000);
   </script>
 
-    
 </body>
 </html>
