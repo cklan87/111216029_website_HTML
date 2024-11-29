@@ -81,43 +81,51 @@
         }
 
         /* 圖片輪播器樣式 */
-        .carousel {
-            position: relative;
-            width: 70%;
-            height: 200px; /* 設定固定的高度 */
-            overflow: hidden;
-            margin: 0 auto; /* 讓輪播器居中 */
-        }
+/* 輪播容器樣式 */
+.carousel {
+    position: relative;
+    width: 90%; /* 容器寬度 */
+    height: 500px; /* 固定高度 */
+    margin: 0 auto; /* 居中顯示 */
+    overflow: hidden; /* 隱藏超出部分 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* 可以讓子元素定位於此 */
+}
 
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+/* 圖片區塊，固定大小，居中顯示 */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
 
-        .carousel-images img {
-            width: 100%; /* 設置寬度為100% */
-            height: 100%; /* 設置圖片的高度為容器高度 */
-            object-fit: contain; /* 確保圖片不被裁切，且縮放保持比例 */
-        }
+.carousel-images img {
+    object-fit: contain;  /* 保持比例，避免裁切 */
+    width: 100%; /* 固定區塊內寬度 */
+    height: 100%; /* 固定區塊內高度 */
+}
 
-        .carousel button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
+/* 兩個按鈕用來控制輪播圖片 */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
 
-        .prev {
-            left: 10px;
-        }
+.prev {
+    left: 10px;
+}
 
-        .next {
-            right: 10px;
-        }
+.next {
+    right: 10px;
+}
 
         /* 顯示下拉選單 */
         .nav > li:hover .dropdown {
@@ -301,24 +309,26 @@
     <!-- 動態腳本 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
-      let currentSlide = 0;
+let currentSlide = 0;
 
-      // 自動播放功能
-      function autoMoveSlide() {
-          moveSlide(1);  // 每次自動移動到下一張圖片
-      }
+// 自動播放功能
+function autoMoveSlide() {
+    moveSlide(1);  // 每次自動移動到下一張圖片
+}
 
-      // 移動輪播的函數
-      function moveSlide(step) {
-          const slides = document.querySelectorAll('.carousel-images img');
-          const totalSlides = slides.length;
-          currentSlide = (currentSlide + step + totalSlides) % totalSlides;
-          document.querySelector('.carousel-images').style.transform = `translateX(-${currentSlide * 100}%)`;
-      }
+// 移動輪播的函數
+function moveSlide(step) {
+    const slides = document.querySelectorAll('.carousel-images img');
+    const totalSlides = slides.length;
+    currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+    
+    // 更新圖片位置
+    document.querySelector('.carousel-images').style.transform = `translateX(-${currentSlide * 100}%)`;
+}
 
-      // 啟動自動播放，每3秒切換一次
-      setInterval(autoMoveSlide, 3000);
+// 啟動自動播放，每3秒切換一次
+setInterval(autoMoveSlide, 3000);
+
       
   </script>
   
